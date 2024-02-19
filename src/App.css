@@ -1,38 +1,106 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background-color: #FF7171;
+  padding: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(12, 10, 10);
+  font-weight: bold;
+}
+
+.body-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.column-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #FFF6AE, #FFB6EC);
+  height: 70vh;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.left-side,
+.left-side2,
+.right-side {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-side2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Ensure images don't exceed their natural size */
+}
+
+.right-content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #FF7171;
+  height: 20vh;
+  border-radius: 10px;
+}
+
+.arrow {
+  font-size: 14px;
+  text-align: start;
+  padding-left: 5px;
+}
+
+button {
+  width: 20%;
+  align-self: center;
+  background-color: #FF7171;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .body-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .left-side,
+  .left-side2,
+  .right-side {
+    flex: unset;
   }
 }
